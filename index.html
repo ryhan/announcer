@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <title>Announcer</title>
+  <link rel="stylesheet" type="text/css" href="main.css"></head>
+
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/underscore.min.js"></script>
+  <script src="js/twitter_observer.js"></script>
+
+  <script src="speakClient.js"></script>
+
+</head>
+<body>
+  Hello there
+  <div id="audio"></div>
+
+<script>
+$(function() {
+
+  called_once = false;
+
+  // Given a set of tweets, say them.
+  var say_tweets = function(tweets){
+    if (called_once){ 
+      var plaintext = (_.pluck(tweets, 'text')).join('. ');
+      console.log(plaintext);
+      speak(plaintext); 
+    }
+    called_once = true;
+  }
+
+  // Watch for TartanHacks tweets, and speak them.
+  (new TwitterObserver("tartanhacks", say_tweets)).watch();
+
+});
+</script>
+</body>
+</html>
