@@ -1,0 +1,60 @@
+/* main.css */
+
+body{
+  background-color: #EEE;
+  padding-left: 280px;
+}
+aside{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 256px;
+  box-sizing: border-box;
+  background-color: #333;
+}
+.main{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 256px;
+  overflow-y: scroll;  
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0px);
+}
+
+.small{
+  opacity: 0.75;
+  position: relative;
+  -webkit-transform: scale(0.4);
+  -webkit-transform-origin: 0% 0%;
+}
+#video{
+}
+#face{
+  position: absolute;
+  border: 5px solid #FEB909;
+  border-radius: 10px;
+  display: none;
+}
+
+
+article{
+  padding: 100px 20px;
+  font-family: "ff-meta-serif-web-pro",serif;
+  font-family: "proxima-nova-soft",sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  min-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+p{
+  -webkit-transition: color 0.2s linear;
+}
+p.reading{
+  color: #003BFF;
+}

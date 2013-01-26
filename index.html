@@ -10,11 +10,42 @@
 
   <script src="speakClient.js"></script>
 
+  <script src="js/compatibility.js"></script>
+  <script src="js/smoother.js"></script>
+  <script src="js/objectdetect.js"></script>
+  <script src="js/objectdetect.frontalface.js"></script>
+  <script src="js/jquery.objectdetect.js"></script>
+
+  <script src="detector.js"></script>
+
+  <script type="text/javascript" src="//use.typekit.net/xak8jut.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
 <body>
-  Hello there
   <div id="audio"></div>
 
+<aside>
+  <div class="small">
+    <video id="video"></video>
+    <div id="face"></div>
+  </div>
+</aside>
+
+<div class="main">
+<article>
+  <h1>Redesigning Google: how Larry Page engineered a beautiful revolution</h1>
+  <p>Something strange and remarkable started happening at Google immediately after Larry Page took full control as CEO in 2011: it started designing good-looking apps.</p>
+  <p>Great design is not something anybody has traditionally expected from Google. Infamously, the company used to focus on A/B testing tiny, incremental changes like 41 different shades of blue for links instead of trusting its designers to create and execute on an overall vision. The "design philosophy that lives or dies strictly by the sword of data" led its very first visual designer, Douglas Bowman, to leave in 2009.</p>
+  <p>More recently, however, it's been impossible to ignore a series of thoughtfully designed apps - especially on iOS, a platform that doesn't belong to Google. Google+, YouTube, Gmail, and Maps are consistent and beautiful - in stark contrast both to Google's previous efforts and even Apple's own increasingly staid offerings.</p>
+
+  <p>We went to Google looking for the person responsible for the new design direction, but the strange answer we got is that such a person doesn't exist. Instead, thanks to a vision laid out by a small team of Google designers, each product team is finding its way to a consistent and forward-looking design language thanks to a surprising process.</p>
+  <p>They're talking to each other.</p>
+
+</article>
+</div>
+
+<!--
 <script>
 $(function() {
 
@@ -31,9 +62,11 @@ $(function() {
   }
 
   // Watch for TartanHacks tweets, and speak them.
-  (new TwitterObserver("tartanhacks", say_tweets)).watch();
+  var th_watcher = new TwitterObserver("tartanhacks", say_tweets);
+  th_watcher.watch();
 
 });
 </script>
+-->
 </body>
 </html>
